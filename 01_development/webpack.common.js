@@ -53,21 +53,21 @@ module.exports = {
 				test: /\.(woff|woff2|eot|ttf|otf)$/i,
 				type: 'asset/resource',
 				generator: {
-					filename: './src/assets/fonts/[name].[ext]',
+					filename: '[file]',
 				},
 			},
 			{
 				test: /\.(svg|jpg|png)$/i,
 				type: 'asset/resource',
 				generator: {
-					filename: './src/assets/images/[name].[ext]',
+					filename: '[file]',
 				},
 			},
 			{
 				test: /\.pdf$/i,
 				type: 'asset/resource',
 				generator: {
-					filename: './src/assets/downloadables/[name].[ext]',
+					filename: '[file]',
 				},
 			},
 		],
