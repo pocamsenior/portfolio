@@ -31,4 +31,18 @@ const assets = {
 	webpackNeutral,
 };
 
-export { assets };
+const links = {
+	github: 'https://github.com/pocamsenior',
+	instagram: 'https://www.instagram.com/flamingomenco/',
+	linkedIn: 'https://www.linkedin.com/in/pocamsenior/',
+	email: 'mailto:pocamsenior@gmail.com',
+};
+
+const recommendations = {
+	music: 'https://www.youtube.com/watch?v=xvFGya7BkUE',
+	tv: 'https://www.netflix.com/title/81078217',
+	interesting: 'https://www.youtube.com/watch?v=-y3RGeaxksY',
+	funny: 'https://www.netflix.com/title/81471774',
+};
+
+export { assets, recommendations, links };

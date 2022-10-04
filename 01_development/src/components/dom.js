@@ -101,13 +101,6 @@ const lineup = {
 	previous: 'is-previous',
 };
 
-const recommendations = {
-	music: 'https://www.youtube.com/watch?v=xvFGya7BkUE',
-	tv: 'https://www.netflix.com/title/81078217',
-	interesting: 'https://www.youtube.com/watch?v=-y3RGeaxksY',
-	funny: 'https://www.netflix.com/title/81471774',
-};
-
 export {
 	main,
 	preloader,
@@ -119,5 +112,4 @@ export {
 	state,
 	transition,
 	lineup,
-	recommendations
 };

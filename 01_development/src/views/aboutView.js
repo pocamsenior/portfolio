@@ -1,6 +1,6 @@
 import aboutCSS from '../styles/about.module.css';
 import * as dom from '../components/dom';
-import { assets } from './assets';
+import { assets, recommendations, links } from './assets';
 
 const location = dom.location.about;
 const title = `Portia C. Senior | About Me`;
@@ -20,7 +20,7 @@ const html = `
 				multitude of diverse topics.
 			</p>
 			<div class="${aboutCSS['social-links']} horz-split horz-split--center">
-				<a href="https://github.com/pocamsenior" target="_blank">
+				<a href="${links.github}" target="_blank">
 					<svg
 						class="github-icon"
 						xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +50,7 @@ const html = `
 						/>
 					</svg>
 				</a>
-				<a href="./about/PortiaCSenior_resume.pdf" target="_blank">
+				<a href="${assets.resume}" target="_blank">
 					<span class="export-container horz-split horz-split--center">
 						<span class="export-icon-wrapper">
 							<svg
@@ -91,7 +91,7 @@ const html = `
 						<span class="export_text">resume</span>
 					</span>
 				</a>
-				<a href="https://www.instagram.com/flamingomenco/" target="_blank">
+				<a href="${links.instagram}" target="_blank">
 					<svg
 						class="instagram-icon"
 						xmlns="http://www.w3.org/2000/svg"
@@ -126,7 +126,7 @@ const html = `
 						/>
 					</svg>
 				</a>
-				<a href="https://www.linkedin.com/in/pocamsenior/" target="_blank">
+				<a href="${links.linkedIn}" target="_blank">
 					<svg
 						class="linkedin-icon"
 						xmlns="http://www.w3.org/2000/svg"
@@ -177,7 +177,7 @@ const html = `
 						/>
 					</svg>
 				</a>
-				<a href="mailto:pocamsenior@gmail.com" target="_blank">
+				<a href="${links.email}" target="_blank">
 					<span class="email-icon-wrapper">
 						<svg
 							class="email-icon"
@@ -379,7 +379,7 @@ const html = `
 		<section class="${aboutCSS['section--recommendations']}">
 			<div>
 				<a
-					href="${dom.recommendations.music}"
+					href="${recommendations.music}"
 					target="_blank"
 				>
 					<span class="export-container horz-split horz-split--center">
@@ -426,7 +426,7 @@ const html = `
 				</a>
 			</div>
 			<div>
-				<a href="${dom.recommendations.tv}" target="_blank">
+				<a href="${recommendations.tv}" target="_blank">
 					<span class="export-container horz-split horz-split--center">
 						<span class="export-icon-wrapper">
 							<svg
@@ -472,7 +472,7 @@ const html = `
 			</div>
 			<div>
 				<a
-					href="${dom.recommendations.interesting}"
+					href="${recommendations.interesting}"
 					target="_blank"
 				>
 					<span class="export-container horz-split horz-split--center">
@@ -519,7 +519,7 @@ const html = `
 				</a>
 			</div>
 			<div>
-				<a href="${dom.recommendations.funny}" target="_blank">
+				<a href="${recommendations.funny}" target="_blank">
 					<span class="export-container horz-split horz-split--center">
 						<span class="export-icon-wrapper">
 							<svg

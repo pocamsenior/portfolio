@@ -1,7 +1,7 @@
 import homeCSS from '../styles/home.module.css';
 import * as dom from '../components/dom';
 import * as user from '../utils/user';
-import { assets } from './assets';
+import { assets, links } from './assets';
 
 const location = dom.location.home;
 const title = `Portia C. Senior | Home`;
@@ -23,7 +23,7 @@ const html = `
 			<span class="heading--medium">I'm a Frontend Developer</span>
 		</h2>
 		<div class="social-links horz-split horz-split--center">
-			<a href="https://github.com/pocamsenior" target="_blank">
+			<a href="${links.github}" target="_blank">
 				<svg
 					class="github-icon"
 					xmlns="http://www.w3.org/2000/svg"
