@@ -1,0 +1,12 @@
+.page[data-page='about'] {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.page[data-page='about'][data-state='is-hidden'] {
+	opacity: 0;
+}
+.page[data-page='about'] .page_inner {
+	gap: var(--fluid_sm);
+}
