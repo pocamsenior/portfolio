@@ -1,6 +1,7 @@
 import * as dom from '../components/dom';
 import { toggleMenuOverlayState, menuOverlayHandler } from './menu';
 import { removePreloaderWrapper } from './preloader';
+import { enableScroll } from '../utils/window';
 const menuBtn = dom.navbar.menuBtn;
 
 const navbarMenuBtnHandler = function () {
@@ -41,7 +42,10 @@ const loadNavbar = function () {
 	clipFill.addEventListener('transitionstart', () => {
 		removePreloaderWrapper();
 		activePage.dataset.state = dom.state.visible;
-		activePage.dataset.transition = dom.transition.from.preloader
+		activePage.dataset.transition = dom.transition.from.preloader;
+	});
+	clipFill.addEventListener('transitionend', e => {
+		enableScroll();
 	});
 	navbarMenuBtnHandler();
 	menuOverlayHandler();

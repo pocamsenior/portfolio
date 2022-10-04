@@ -1,7 +1,8 @@
 'use strict';
 import * as user from '../utils/user';
 import * as dom from '../components/dom';
-import * as preloader from '../views/preloaderView'
+import * as preloader from '../views/preloaderView';
+import { enableScroll, disableScroll } from '../utils/window';
 import { floatPrecision } from '../utils/math';
 import { loadNavbar } from './navbar';
 import { TopoContour } from '../classes/Contour';
@@ -26,6 +27,7 @@ const preloaderHandler = function () {
 	const tildeFill = dom.preloader.logo.tildeFill;
 	const clipFill = dom.preloader.logo.clipFill;
 
+	disableScroll();
 	document.addEventListener('DOMContentLoaded', e => {
 		const page = document.querySelector('.page');
 		wrapper.dataset.state = dom.state.loading;
@@ -51,6 +53,7 @@ const preloaderHandler = function () {
 	clipFill.addEventListener('transitionstart', e => {
 		toggleContourLineup(contour);
 		loadNavbar();
+		// enableScroll();
 	});
 };
 const removePreloaderWrapper = function () {

@@ -1,3 +1,4 @@
+import { main } from '../components/dom';
 import * as stylesheet from '../styles/stylesheet';
 import { throttle } from './flow';
 
@@ -12,9 +13,25 @@ const setMinPageHeight = function () {
 
 const throttleMinPageHeight = throttle(setMinPageHeight, 500);
 
-const pageResize = function(){
+const pageResize = function () {
 	throttleMinPageHeight();
 	window.addEventListener('resize', throttleMinPageHeight);
-}
+};
 
-export { pageResize };
+const preventDefault = function (e) {
+	e.preventDefault();
+};
+
+const disableScroll = function () {
+	main.app.classList.add('noscroll');
+	document.body.addEventListener('touchmove', preventDefault, {
+		passive: false,
+	});
+};
+
+const enableScroll = function () {
+	main.app.classList.remove('noscroll');
+	document.body.removeEventListener('touchmove', preventDefault);
+};
+
+export { pageResize, disableScroll, enableScroll };

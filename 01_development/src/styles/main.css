@@ -163,6 +163,11 @@ q {
 	text-align: center;
 }
 
+/* side effects */
+.noscroll {
+	overflow-y: hidden;
+}
+
 /* components */
 
 .app {
