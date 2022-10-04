@@ -4,7 +4,7 @@
 [x] install dev dependencies
 npm i webpack webpack-cli webpack-dev-server webpack-merge css-loader style-loader html-loader html-webpack-plugin mini-css-extract-plugin vitest @vitest/ui -D
 
-[] install dependencies
+[x] install dependencies
 npm i @babel/core @babel/preset-env babel-loader
 npm i current-device
 
@@ -15,7 +15,7 @@ npm i current-device
 "dev": "npx webpack serve --config webpack.dev.js",
 "dev:m": "cd ~ && ./ngrok http 3000",
 "build": "webpack --config webpack.prod.js"
-"deploy:first":"",
+"deploy:first":"git push origin`git subtree split --prefix ./02_development/dist gh-pages`:gh-pages --force",
 "deploy":"git subtree push --prefix dist origin deploy",
 
 vitest ui

@@ -8,7 +8,7 @@ const { merge } = require('webpack-merge');
 module.exports = merge(common, {
 	mode: 'production',
 	output: {
-		path: path.resolve(__dirname, 'dist'),
+		path: path.resolve(__dirname, '../02_deployment/dist'),
 		filename: 'main.[contenthash].js',
 		clean: true,
 		assetModuleFilename: '[file]',
@@ -26,7 +26,7 @@ module.exports = merge(common, {
 	},
 	plugins: [
 		new MiniCssExtractPlugin({
-			filename: './src/styles/[name].css',
+			filename: './src/styles/[name].[contenthash].css',
 		}),
 	],
 });
