@@ -1,6 +1,7 @@
 import homeCSS from '../styles/home.module.css';
 import * as dom from '../components/dom';
 import * as user from '../utils/user';
+import { assets } from './assets';
 
 const location = dom.location.home;
 const title = `Portia C. Senior | Home`;
@@ -54,7 +55,7 @@ const html = `
 					/>
 				</svg>
 			</a>
-			<a href="./about/PortiaCSenior_resume.pdf" target="_blank">
+			<a href="${assets.resume}" target="_blank">
 					<span class="export-container horz-split horz-split--center">
 						<span class="export-icon-wrapper">
 							<svg

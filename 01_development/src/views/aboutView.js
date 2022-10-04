@@ -1,19 +1,6 @@
 import aboutCSS from '../styles/about.module.css';
 import * as dom from '../components/dom';
-
-import devImage from '../assets/images/portia-senior.jpg';
-import adobeColor from '../assets/images/stamps/adobe-color.png';
-import adobeNeutral from '../assets/images/stamps/adobe-neutral.png';
-import cssColor from '../assets/images/stamps/css-color.png';
-import cssNeutral from '../assets/images/stamps/css-neutral.png';
-import gitColor from '../assets/images/stamps/git-color.png';
-import gitNeutral from '../assets/images/stamps/git-neutral.png';
-import htmlColor from '../assets/images/stamps/html-color.png';
-import htmlNeutral from '../assets/images/stamps/html-neutral.png';
-import javascriptColor from '../assets/images/stamps/javascript-color.png';
-import javascriptNeutral from '../assets/images/stamps/javascript-neutral.png';
-import webpackColor from '../assets/images/stamps/webpack-color.png';
-import webpackNeutral from '../assets/images/stamps/webpack-neutral.png';
+import { assets } from './assets';
 
 const location = dom.location.about;
 const title = `Portia C. Senior | About Me`;
@@ -298,11 +285,11 @@ const html = `
 					<div class="${aboutCSS['stamp-wrapper']}">
 						<img
 							class="${aboutCSS['stamp']} ${aboutCSS['stamp--neutral']}"
-							src="${htmlNeutral}"
+							src="${assets.htmlNeutral}"
 						/>
 						<img
 							class="${aboutCSS['stamp']} ${aboutCSS['stamp--color']}"
-							src="${htmlColor}"
+							src="${assets.htmlColor}"
 						/>
 					</div>
 					<figcaption class="${aboutCSS['stamp-text']}">HTML</figcaption>
@@ -311,11 +298,11 @@ const html = `
 					<div class="${aboutCSS['stamp-wrapper']}">
 						<img
 							class="${aboutCSS['stamp']} ${aboutCSS['stamp--neutral']}"
-							src="${cssNeutral}"
+							src="${assets.cssNeutral}"
 						/>
 						<img
 							class="${aboutCSS['stamp']} ${aboutCSS['stamp--color']}"
-							src="${cssColor}"
+							src="${assets.cssColor}"
 						/>
 					</div>
 					<figcaption class="${aboutCSS['stamp-text']}">CSS</figcaption>
@@ -324,11 +311,11 @@ const html = `
 					<div class="${aboutCSS['stamp-wrapper']}">
 						<img
 							class="${aboutCSS['stamp']} ${aboutCSS['stamp--neutral']}"
-							src="${javascriptNeutral}"
+							src="${assets.javascriptNeutral}"
 						/>
 						<img
 							class="${aboutCSS['stamp']} ${aboutCSS['stamp--color']}"
-							src="${javascriptColor}"
+							src="${assets.javascriptColor}"
 						/>
 					</div>
 					<figcaption class="${aboutCSS['stamp-text']}">JavaScript</figcaption>
@@ -337,11 +324,11 @@ const html = `
 					<div class="${aboutCSS['stamp-wrapper']}">
 						<img
 							class="${aboutCSS['stamp']} ${aboutCSS['stamp--neutral']}"
-							src="${webpackNeutral}"
+							src="${assets.webpackNeutral}"
 						/>
 						<img
 							class="${aboutCSS['stamp']} ${aboutCSS['stamp--color']}"
-							src="${webpackColor}"
+							src="${assets.webpackColor}"
 						/>
 					</div>
 					<figcaption class="${aboutCSS['stamp-text']}">Webpack</figcaption>
@@ -350,11 +337,11 @@ const html = `
 					<div class="${aboutCSS['stamp-wrapper']}">
 						<img
 							class="${aboutCSS['stamp']} ${aboutCSS['stamp--neutral']}"
-							src="${gitNeutral}"
+							src="${assets.gitNeutral}"
 						/>
 						<img
 							class="${aboutCSS['stamp']} ${aboutCSS['stamp--color']}"
-							src="${gitColor}"
+							src="${assets.gitColor}"
 						/>
 					</div>
 					<figcaption class="${aboutCSS['stamp-text']}">Git</figcaption>
@@ -363,11 +350,11 @@ const html = `
 					<div class="${aboutCSS['stamp-wrapper']}">
 						<img
 							class="${aboutCSS['stamp']} ${aboutCSS['stamp--neutral']}"
-							src="${adobeNeutral}"
+							src="${assets.adobeNeutral}"
 						/>
 						<img
 							class="${aboutCSS['stamp']} ${aboutCSS['stamp--color']}"
-							src="${adobeColor}"
+							src="${assets.adobeColor}"
 						/>
 					</div>
 					<figcaption class="${aboutCSS['stamp-text']}">Adobe Creative Suite</figcaption>
@@ -383,7 +370,7 @@ const html = `
 			</p>
 		</section>
 		<section class="${aboutCSS['section--img']}">
-			<img class="${aboutCSS['dev-img']}" src="${devImage}" />
+			<img class="${aboutCSS['dev-img']}" src="${assets.devImage}" />
 			<q
 				>I'll try anything twice. <br/>Once out of curiosity. Twice to make
 				sure.</q
