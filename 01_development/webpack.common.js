@@ -1,0 +1,80 @@
+//common configuration
+
+/*
+[x] install dev dependencies
+npm i webpack webpack-cli webpack-dev-server webpack-merge css-loader style-loader html-loader html-webpack-plugin mini-css-extract-plugin vitest @vitest/ui -D
+
+[] install dependencies
+npm i @babel/core @babel/preset-env babel-loader
+npm i current-device
+
+[x] add scripts
+"test": "vitest --run --reporter verbose",
+"test:watch": "vitest",
+"test:ui": "vitest --ui",
+"dev": "npx webpack serve --config webpack.dev.js",
+"dev:m": "cd ~ && ./ngrok http 3000",
+"build": "webpack --config webpack.prod.js"
+"deploy:first":"",
+"deploy":"git subtree push --prefix dist origin deploy",
+
+vitest ui
+http://localhost:51204/__vitest__/
+https://vitest.dev/guide/filtering.html
+*/
+
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
+module.exports = {
+	entry: ['./src/main.js'],
+	module: {
+		rules: [
+			{ test: /\.html$/, use: 'html-loader' },
+			{
+				test: /\.css$/,
+				use: [
+					MiniCssExtractPlugin.loader,
+					{
+						loader: 'css-loader',
+						options: {
+							modules: { localIdentName: '[name]_[local]' },
+						},
+					},
+				],
+				include: /\.module\.css$/,
+			},
+			{
+				test: /\.css$/,
+				use: [MiniCssExtractPlugin.loader, 'css-loader'],
+				exclude: /\.module\.css$/,
+			},
+			{
+				test: /\.(woff|woff2|eot|ttf|otf)$/i,
+				type: 'asset/resource',
+				generator: {
+					filename: './src/assets/fonts/[name].[ext]',
+				},
+			},
+			{
+				test: /\.(svg|jpg|png)$/i,
+				type: 'asset/resource',
+				generator: {
+					filename: './src/assets/images/[name].[ext]',
+				},
+			},
+			{
+				test: /\.pdf$/i,
+				type: 'asset/resource',
+				generator: {
+					filename: './src/assets/downloadables/[name].[ext]',
+				},
+			},
+		],
+	},
+	plugins: [
+		new HtmlWebpackPlugin({
+			template: 'index.html',
+		}),
+	],
+};
