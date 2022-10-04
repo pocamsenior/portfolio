@@ -135,6 +135,7 @@ body {
 	font-size: 1.6rem;
 	font-weight: normal;
 	color: var(--black);
+	position: relative;
 }
 
 a:link,
@@ -165,9 +166,15 @@ q {
 /* components */
 
 .app {
-	position: relative;
+	position: absolute;
+	inset: 0;
 	z-index: var(--layer_app);
 	overflow-x: hidden;
+		scrollbar-width: none;
+}
+
+.app::-webkit-scrollbar {
+	display: none;
 }
 
 .btn {
@@ -197,12 +204,10 @@ q {
 /* headings */
 .heading--small {
 	font-size: var(--font_base);
-	/* font-weight: 500; */
 }
 
 .heading--medium {
 	font-size: var(--font_lg);
-	/* font-weight: 500; */
 }
 
 .heading--large {
@@ -284,6 +289,10 @@ q {
 .topo_bkg-wrapper {
 	height: 100%;
 	overflow: hidden;
+}
+
+ .topo_bkg {
+	height: 100%;
 }
 
 .topo_contours-wrapper {
